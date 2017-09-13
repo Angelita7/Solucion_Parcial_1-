@@ -3,8 +3,22 @@ Angela_Restrepo-Miguel_Herrera
 # Solucion_Parcial_1
 
 1. Describa la Taxonomía de Flynn.
-R/: 
+R/: Número de instrucciones y de secuencia de dato que la computadora utiliza
+para procesar información. Existen cuatro tipos de computadoras.
+```
+-SISD (Una instrucción, un dato).
+-MISD (Multiples instrucciones, un dato).
+-SIMD (Una instrucción, multiples datos).
+-MIMD (Multiples instrucciones, multiples datos).
+```
 2. Diga cuales son los 4 principios de diseño.
+R/:
+```
+1. La simplicidad favorece la regularidad
+2. Entre más pequeño, más rápido
+3. Hacer el caso común más rápido
+4. Grandes diseños demandan grandes compromisos
+```
 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura **SPARC V8** 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
