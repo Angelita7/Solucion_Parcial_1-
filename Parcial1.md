@@ -4,11 +4,12 @@ Angela_Restrepo-Miguel_Herrera
 
 1. Describa la Taxonomía de Flynn.
 2. Diga cuales son los 4 principios de diseño.
+```
 R// Principios del Diseño.
 -La simplicidad favorece la regularidad.
 -Entre más pequeño mas rapido.
 -Grandes diseños demandan grandes compromisos.
-
+```
 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura **SPARC V8** 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
