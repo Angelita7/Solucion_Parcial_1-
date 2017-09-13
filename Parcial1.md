@@ -6,8 +6,9 @@ Angela_Restrepo-Miguel_Herrera
 2. Diga cuales son los 4 principios de diseño.
 ```
 R// Principios del Diseño.
--La simplicidad favorece la regularidad.
--Entre más pequeño mas rapido.
+1.La simplicidad favorece la regularidad.
+2.Entre más pequeño mas rapido.
+3.Hacer el caso común más rapido.
 -Grandes diseños demandan grandes compromisos.
 ```
 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura **SPARC V8** 
