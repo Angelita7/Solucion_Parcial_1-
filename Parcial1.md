@@ -9,7 +9,7 @@ R// Principios del Diseño.
 1.La simplicidad favorece la regularidad.
 2.Entre más pequeño mas rapido.
 3.Hacer el caso común más rapido.
--Grandes diseños demandan grandes compromisos.
+4.Grandes diseños demandan grandes compromisos.
 ```
 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura **SPARC V8** 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
