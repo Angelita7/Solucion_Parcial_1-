@@ -3,17 +3,18 @@ Angela_Restrepo-Miguel_Herrera
 # Solucion_Parcial_1
 
 1. Describa la Taxonomía de Flynn.
+```
 R/: Número de instrucciones y de secuencia de dato que la computadora utiliza
 para procesar información. Existen cuatro tipos de computadoras.
-```
+
 -SISD (Una instrucción, un dato).
 -MISD (Multiples instrucciones, un dato).
 -SIMD (Una instrucción, multiples datos).
 -MIMD (Multiples instrucciones, multiples datos).
 ```
 2. Diga cuales son los 4 principios de diseño.
-R/:
 ```
+R/:
 1. La simplicidad favorece la regularidad
 2. Entre más pequeño, más rápido
 3. Hacer el caso común más rápido
