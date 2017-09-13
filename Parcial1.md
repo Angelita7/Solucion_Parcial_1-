@@ -1,7 +1,6 @@
-# Solucion_Parcial_1-
 Angela_Restrepo-Miguel_Herrera
-
-# Solución 
+ 
+# Solucion_Parcial_1
 
 1. Describa la Taxonomía de Flynn.
 2. Diga cuales son los 4 principios de diseño.
