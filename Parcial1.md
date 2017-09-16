@@ -48,10 +48,20 @@ R/ Para inicializar un número que se pasa de 13 bits:
 ```
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
 ```
+R/: 
+
 * OR se puede reescribir con la instrucción MOV
 * SUBcc se puede reescribir con la instrucción CMP
 ```
 6. ¿Qué instrucciones utilizan el delay slot antes de saltar?
+```
+R/:Las intrucciones que utilizan el Delay Slot son:
+
+* Call
+* Branch
+* Jump and Link
+
+```
 7. ¿Qué significa el bit **a**, en el formato 2 de las instrucciones **BRANCH**?
 8. ¿Por que la instrucción **CALL** utilizar el registro %o7 ---> registro 15.?
 9. convertir el programa en lenguaje de máquina a lenguaje ensamblador y luego a lenguaje de alto nivel el siguiente programa:
