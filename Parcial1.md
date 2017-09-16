@@ -20,6 +20,7 @@ R/:
 3. Hacer el caso común más rápido
 4. Grandes diseños demandan grandes compromisos
 ```
+```
 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura **SPARC V8** 
 ```
 ### Fomato 1. Para funciones de llamado.
