@@ -99,6 +99,9 @@ R/: El bit "a", en el formato 2 de las instrucciones BRANCH significa:
 
 ```
 8. ¿Por que la instrucción **CALL** utilizar el registro %o7 ---> registro 15.?
+```
+R/: La instrucción CALL utiliza el registro %o7(registro 15) por que es la dirección actual.
+```
 9. convertir el programa en lenguaje de máquina a lenguaje ensamblador y luego a lenguaje de alto nivel el siguiente programa:
 ```
 |10|10000|000010|00000|1|0000000000101|
