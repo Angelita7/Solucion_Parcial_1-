@@ -63,6 +63,13 @@ R/:Las intrucciones que utilizan el Delay Slot antes de saltar son:
 
 ```
 7. ¿Qué significa el bit **a**, en el formato 2 de las instrucciones **BRANCH**?
+```
+R/: El bit "a", en el formato 2 de las instrucciones BRANCH significa:
+
+* Si "a" esta en 0 ejecuta la instrucción que esta por debajo y luego salta.
+* Si "a" esta en 1 no ejecuta la instrucción que esta por debajo, solo salta.
+
+```
 8. ¿Por que la instrucción **CALL** utilizar el registro %o7 ---> registro 15.?
 9. convertir el programa en lenguaje de máquina a lenguaje ensamblador y luego a lenguaje de alto nivel el siguiente programa:
 ```
