@@ -152,7 +152,8 @@ else{
 }
 
 
-Lenguaje de Bajo Nivel
+###Lenguaje de Bajo Nivel
+
 0x0000 MOV 8, %L0
 0x0004 SETHI -17, %L1
 0x0008 OR %L1, 608, %L1
@@ -163,7 +164,25 @@ Lenguaje de Bajo Nivel
 0x001C BG a Etiqueta
 0x0020 SLL %L1, 2, %L5
 0x0024 ADD %L0, %L5,%L2
-0x00
+0x0028 BA a Salir
+
+Etiqueta
+0x002C MOV %L1, %O0
+Salir
+0x0030 ADD %L0, %L2, %01
+
+###Lenguaje de Maquina
+
+16800
+00000000000000000100000110100000
+11111111111111111011111001011111
+                               1
+--------------------------------
+11111111111111111011111001100000
+
+1111111111111111101111=(608)--> Los 22 bits mas significativos
+
+1001100000=(17)
 
  ```
  
