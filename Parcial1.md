@@ -117,9 +117,23 @@ Rs2(0101)--> 5
 ```
 
 
-
 |10|10001|000010|00000|1|1111111111010|
+```
+Op(10)--> Formato 3
+Rd(10001)-->%L1
+Op3(000010)--> OR
+Rs1(00000)--> %g0
+i(1)-->inmediato
+Rs2(1010)--> 10
+```
 |10|01000|000000|10001|0|0000000010000|
+```
+Op(10)-->Formato 3 
+Rd(01000)-->%o0
+Op3(000000)--> Add
+Rs1(10001)--> %L1
+i(0)--> No hay inmediato
+Rs2(10000)--> %L0
 ```
 10. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
 a.
