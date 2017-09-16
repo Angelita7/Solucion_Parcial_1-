@@ -241,6 +241,8 @@ c.
 int main(){
 	int a = -21180;
 }
+R/:
+
 ```
 
 11. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
