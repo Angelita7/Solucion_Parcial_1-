@@ -31,9 +31,37 @@ R/:
 Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de dewsplazamientos.
 ```
 ```
-### Fomato 2. 
-| op |        disp30|
-31  29              0
+### Fomato 2.  Se utiliza para los Branch, Sethi, Nop
+| op | a |cond | op2 |       disp22|
+31  29  28    24    21             0
+
+Op---> Indica el tipo de instrucciones.
+a----> Indica si se debe ejecutar las innstruciones que hay por debajo(0 o 1).
+Cond-> Elige cual es la instruccion que se utiliza.
+Op2--> Indica que tipo de operacion o el operando, se realizara  en la comparacion.
+
+| op | rd | 100|       disp22|
+31   29   24   21            0
+
+rd--> registo destino.
+```
+```
+### Fomato 3. Para Aritmetica y logicas.
+
+Con inmediato. 
+| op | rd |op3 | rs1 | i=0 | unused(zero) | rs2 |
+31  29    24  18     13    12           4     0
+
+Sin inmediato.
+| op | rd |op3 | rs1 | i=1 |     inm13       |
+31  29    24  18     13    12                0
+
+Rd--> Registro destino.
+Op3-> Indica el tipo operacion.
+Rs1-> Registro fuente 1.
+Rs2-> Registro fuente 2.
+i---> Indica si hay inmediato o no.
+inm-> Inmediato.
 ```
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 ```
