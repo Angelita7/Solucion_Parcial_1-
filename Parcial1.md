@@ -55,7 +55,7 @@ R/:
 ```
 6. ¿Qué instrucciones utilizan el delay slot antes de saltar?
 ```
-R/:Las intrucciones que utilizan el Delay Slot son:
+R/:Las intrucciones que utilizan el Delay Slot antes de saltar son:
 
 * Call
 * Branch
