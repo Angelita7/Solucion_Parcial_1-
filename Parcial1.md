@@ -48,8 +48,8 @@ R/ Para inicializar un número que se pasa de 13 bits:
 ```
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
 ```
-* #OR# se puede reescribir con la instrucción #MOV#
-* #SUBcc# se puede reescribir con la instrucción #CMP#
+* #OR se puede reescribir con la instrucción MOV
+* #SUBcc se puede reescribir con la instrucción CMP
 ```
 6. ¿Qué instrucciones utilizan el delay slot antes de saltar?
 7. ¿Qué significa el bit **a**, en el formato 2 de las instrucciones **BRANCH**?
