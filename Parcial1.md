@@ -22,15 +22,21 @@ R/:
 ```
 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura **SPARC V8** 
 ```
-4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
-R/ Para inicializar un número que se pasa de 13 bits:
+### Fomato 1. Para funciones de llamado.
 
-* Pasar el número decimal a binario.
-* Al número binario se le completa a las izquierda los bits hasta tener 32 bits.
-* Si el número es positivo y para completar los 32 bits solo ponemos 0 de derecha a izquierda, sacamos los 22 bits más significativos.
-* Si el número es negativo, se pasa a binario positivo, se completan los 32 bits con 0 de derecha a izquierda, se invierte el número binario a positivo y se le suma 1, se le realiza complemento a 2, después se toman los 22 bits más significativos.
-* Al finalizar asignamos registros y declaramos con el Sethi----> 22 + significativos y con el OR------> El sobrante.
+| op |        disp30|
+31  29              0
+
+Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de dewsplazamientos.
 ```
+```
+### Fomato 2. 
+| op |        disp30|
+31  29              0
+```
+
+4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
+
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
 6. ¿Qué instrucciones utilizan el delay slot antes de saltar?
 7. ¿Qué significa el bit **a**, en el formato 2 de las instrucciones **BRANCH**?
