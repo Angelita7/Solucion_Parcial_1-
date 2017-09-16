@@ -136,6 +136,7 @@ i(0)--> No hay inmediato
 Rs2(10000)--> %L0
 ```
 10. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
+
 a.
  ```c.
  int main(){
@@ -202,6 +203,38 @@ else{
 	return b;
 }
 }
+
+###Lenguaje de Bajo nivel
+
+Complemento a 2: 
+
+-10
+
+00000000000000000000000000001010
+11111111111111111111111111110101
+_______________________________1
+11111111111111111111111111110110
+22 bits + sig.		1014		
+
+1111111111111111111111
+0000000000000000000000
+_____________________1
+0000000000000000000001= 1
+
+0x0000 MOV 8 %L0
+0X0004 MOV -10 %L1
+0X0008 CMP %L0,%L1
+0X000C BE SALTO
+0X0010 MOV 0 %L2
+0X0014 SRL %L2,8.%L2
+
+SALTO
+0X0018 MOV %L2 %O0
+0X002C MOV %L1 %O1
+
+###Lenguaje de Máquina
+
+
 ```
 c.
  ```c
