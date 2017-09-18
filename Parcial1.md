@@ -186,6 +186,7 @@ Salir
 0x0030 ADD %L0, %L2, %01
 
 ###Lenguaje de Maquina
+```
 Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |      simm13     |
 0x0000      |  10  | 10000  |000010 | 00000 |  1  |  0000000010000  |
             |  op  |   rd   |  op2  |              disp222          |    
@@ -212,7 +213,7 @@ Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |      simm13     |
 0x002C      |  10  | 01000  |000010 | 10001 |  0  | 00000000| 00000 |
             |  op  |   rd   |  op3  |  rs1  |  i  |  unused |  rs2  |
 0x0030      |  10  | 01001  | 000000| 10000 |  0  | 00000000| 10001 |
-           
+ ```          
  ```
  
 
