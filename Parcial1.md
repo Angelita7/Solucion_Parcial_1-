@@ -187,31 +187,31 @@ Salir
 
 ###Lenguaje de Maquina
 Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0000      |10
+0x0000      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |    
-0x0004 
+0x0004      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0008 
+0x0008      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x000C
+0x000C      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0010 
+0x0010      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0014 
+0x0014      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0018 
+0x0018      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x001C 
+0x001C      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0020 
+0x0020      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0024 
+0x0024      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0028 
+0x0028      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x002C
+0x002C      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0030
+0x0030      |10    |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
  ```
  
