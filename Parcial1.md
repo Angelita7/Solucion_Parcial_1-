@@ -198,13 +198,21 @@ Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0010 
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0014 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0018 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x001C 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0020 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0024 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0028 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x002C
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
 0x0030
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
  ```
  
 
