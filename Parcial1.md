@@ -186,8 +186,25 @@ Salir
 0x0030 ADD %L0, %L2, %01
 
 ###Lenguaje de Maquina
-
-
+Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
+0x0000      |10
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |    
+0x0004 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
+0x0008 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
+0x000C
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
+0x0010 
+            |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
+0x0014 
+0x0018 
+0x001C 
+0x0020 
+0x0024 
+0x0028 
+0x002C
+0x0030
  ```
  
 
