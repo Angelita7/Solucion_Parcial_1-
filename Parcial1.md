@@ -186,32 +186,32 @@ Salir
 0x0030 ADD %L0, %L2, %01
 
 ###Lenguaje de Maquina
-Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0000      |10    |        |       |       |     |         |
+Direccion   |  op  |   rd   |  op3  |  rs1  |  i  |     simm13    |
+0x0000      |  10  | 10000  |000010 | 00000 |  1  | 0000000010000 |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |    
-0x0004      |10    |        |       |       |     |         |
+0x0004      |  00  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0008      |10    |        |       |       |     |         |
+0x0008      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x000C      |10    |        |       |       |     |         |
+0x000C      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0010      |10    |        |       |       |     |         |
+0x0010      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0014      |10    |        |       |       |     |         |
+0x0014      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0018      |10    |        |       |       |     |         |
+0x0018      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x001C      |10    |        |       |       |     |         |
+0x001C      |  00  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0020      |10    |        |       |       |     |         |
+0x0020      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0024      |10    |        |       |       |     |         |
+0x0024      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0028      |10    |        |       |       |     |         |
+0x0028      |  00  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x002C      |10    |        |       |       |     |         |
+0x002C      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
-0x0030      |10    |        |       |       |     |         |
+0x0030      |  10  |        |       |       |     |         |
             |  op  |   rd   |  op3  |  rs1  |  i  |  simm13 |
  ```
  
