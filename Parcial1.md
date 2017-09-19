@@ -7,10 +7,10 @@ Angela_Restrepo-Miguel_Herrera
 R/: Número de instrucciones y de secuencia de dato que la computadora utiliza
 para procesar información. Existen cuatro tipos de computadoras.
 
--SISD (Una instrucción, un dato).
--MISD (Multiples instrucciones, un dato).
--SIMD (Una instrucción, multiples datos).
--MIMD (Multiples instrucciones, multiples datos).
+-SISD (Single Instruction, Single Data) Una instrucción, un dato.
+-SIMD (Single Instruction, Multiple Data) Una instrucción, multiples datos.
+-MIMD (Multiple Instruction, Multiple Datas) Multiples instrucciones, multiples datos).
+-MISD (Multiple Instruction Single Data) Multiples instrucciones, un dato.
 ```
 2. Diga cuales son los 4 principios de diseño.
 ```
@@ -28,7 +28,7 @@ R/:
 | op |        disp30|
 31  29              0
 
-Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de dewsplazamientos.
+Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de desplazamientos.
 ```
 ```
 ### Fomato 2.  Se utiliza para los Branch, Sethi, Nop
