@@ -596,7 +596,8 @@ OX0028	        00	0	1000	010	11111111111111111111O11
    
 
 15. Implemente una función **Div** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que calcule la division de un número entero sin signo.
-   ```
+
+```
    R/:
    int div (divisor, dividendo, residuo, cociente=0;){
   
@@ -625,10 +626,6 @@ BA a While
 SUB %i2, %i0,  %L0
 ADD %I4, 1, %I4
 EXIT
-
-
-
-   
-      ```
+```
 
 
