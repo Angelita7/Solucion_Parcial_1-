@@ -326,25 +326,25 @@ X=%i0
    y=%i1
    z=%i2 
    c=%L0  
-   a=%L1                                     Lenguaje ensamblador
-					     EJEMPLO			     
-int ejemplo(int x, int y, int z){            SUB %i0,%i1,%i3
-        int a;                               SLL %i2,8,%i2
-        a = x - y + z*8;                     ADD %i3,%i2,%l1
-        return a + 2;                        JMPL %O7,8,%g0
-}                                            ADD %L1,2,%O0
-
-int main(){                                  MAIN
-        int x = 4, y = 2, z = -128;          MOV 4,%i0
-	                                     MOV 2,%i1
-					     MOV -128,%i2
-					     CALL EJEMPLO
-        int c= 0;                            MOV 0,%L0                          
-        int c = ejemplo(x,y,z);              ADD %L0,45,%O1
-        return c + 45;
-}
-
+   a=%L1    
+   
 ###Lenguaje Ensamblado
+
+TEST
+SUB %I0,%i1,%i3
+SLL %i2,8,%i2
+ADD %i3,%i2,%l1
+JMPL %07,8,%g0
+ADD %l1,2,%O0
+
+MAIN
+
+MOV 4,%I0
+MOV 2,%i1
+MOV -128,%i2
+CALL TEST
+MOV 0,%l0
+ADD %l0,45,%O1
 
 ###Lenguaje Maquina
 
@@ -362,8 +362,8 @@ OX001C	       |10|	|11010|	|000010||00000|	 |1|     |1111110000000|
 	       |OP|	|       Disp 30		 |			
 OX0020         |01|	|00000000000000000000000000001000|			
 	       |OP|	|RD|	|OP3|	|RS1|	|i|	|    Unusued |	|RS2|
-OX0024         |10|	|10000	|000010||00000|	|1|	|0000000000000|	
-OX0028         |10|	|11001	|000000||10000|	|1|	|0000000101101|
+OX0024         |10|	|10000	|000010||00000|	|1|	|   00000000 |  00000|	
+OX0028         |10|	|11001	|000000||10000|	|1|	|   00000001 |  01101|
 
  ```
 12. Implemente una función **Mul** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que realice la multiplicación de dos enteros sin signo usando solo sumas.
