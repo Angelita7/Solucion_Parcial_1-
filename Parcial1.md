@@ -355,13 +355,29 @@ int fact(int b){
    Add %L1, 1, %L1
    BA While 
    Salto
+   
+   LENGUAJE MÁQUINA
+
+DIRECCIONES	OP	RD	OP3	RS1	i	Unusued/zero	RS2
+OX0000	        10	1000O	000010	00000	1	0000000000001	
+OX0004	        10	11000	000010	00000	1	0000000000000	
+OX0008	        10	10001	000010	00000	1	0000000000001
+OX000C	        10	11000	000000	11000	1	000000000O001	
+OX0010          10	11000	010100	00000	0	00000000	10001
+	        OP	a	cond	OP2	disp22		
+OX0018	        00	1	1O11	010	0000000000000000000011
+	        OP	disp30					
+OX001C	        01	1111111111111111111111111101101
+OX0020          OP	RD	OP2	Imm22			
+                00	00000	100	0000000000000000000000			
+	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
+OX0024	        10	10001	000000	10001	1	0000000000001	
+	        OP	a	cond	OP2	disp22		
+OX0028	        00	0	1000	010	11111111111111111111O11
+   
     ```
-   
-   
-     
-     
-  
-  
+    
+
 
 15. Implemente una función **Div** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que calcule la division de un número entero sin signo.
 
