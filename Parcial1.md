@@ -7,10 +7,10 @@ Angela_Restrepo-Miguel_Herrera
 R/: Número de instrucciones y de secuencia de dato que la computadora utiliza
 para procesar información. Existen cuatro tipos de computadoras.
 
--SISD (Single Instruction, Single Data) Una instrucción, un dato.
--SIMD (Single Instruction, Multiple Data) Una instrucción, multiples datos.
--MIMD (Multiple Instruction, Multiple Datas) Multiples instrucciones, multiples datos).
--MISD (Multiple Instruction Single Data) Multiples instrucciones, un dato.
+-SISD (Una instrucción, un dato).
+-MISD (Multiples instrucciones, un dato).
+-SIMD (Una instrucción, multiples datos).
+-MIMD (Multiples instrucciones, multiples datos).
 ```
 2. Diga cuales son los 4 principios de diseño.
 ```
@@ -28,10 +28,10 @@ R/:
 | op |        disp30|
 31  29              0
 
-Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de desplazamientos.
+Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de dewsplazamientos.
 ```
 ```
-### Fomato 2.  Se utiliza para los Branch (Instrucciones de Salto), Sethi (Instruccion para inicializar valores de más de 13 bits), Nop
+### Fomato 2.  Se utiliza para los Branch, Sethi, Nop
 | op | a |cond | op2 |       disp22|
 31  29  28    24    21             0
 
@@ -46,7 +46,7 @@ Op2--> Indica que tipo de operacion o el operando, se realizara  en la comparaci
 rd--> registo destino.
 ```
 ```
-### Fomato 3. Instrucciones Aritmeticologicas (ADD,SUB) e instrucciones de memoria (LD,ST).
+### Fomato 3. Para Aritmetica y logicas.
 
 Con inmediato. 
 | op | rd |op3 | rs1 | i=0 | unused(zero) | rs2 |
@@ -326,20 +326,40 @@ int main(){
 
 14. Implemente una función **Fact** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que calcule el factorial de un número entero sin signo.
 
-int fact(int a){
-     int i;
-     int factorial=1;
-     if (a==0){
-     factorial=factorial;
+int fact(int b){
+     int a=1; int i=1;
+     {
+     a=mul(a,i);
+     i++;
      }
-  else {
-  if (a>0){
-  for (i=1; i>=a; i++){
-  factorial=mul(factorial, i);
-  }
-  }
-  retur factorial;
-  }
+     return a;
+     }
+     
+    Asignar regitros. 
+     a=%L0
+     b=%i0
+     i=%L1
+     
+   Lenguaje Ensambrador.
+   
+   Fact
+   Mov 1, %L0
+   Mov 0, %I0
+   Mov 1, %L1
+   Mov %I0, 1, %I0
+   While
+   CMP %L1, %I0
+   BGE a Salto
+   Call Mul
+   Nop
+   Add %L1, 1, %L1
+   BA While 
+   Salto
+   
+   
+   
+     
+     
   
   
 
