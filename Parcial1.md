@@ -31,7 +31,7 @@ R/:
 Donde el Op especifica el tipo de instrucciones y el Disp30 se utiliza para almacenar el numero de desplazamientos.
 ```
 ```
-### Fomato 2.  Se utiliza para los Branch, Sethi, Nop
+### Fomato 2.  Se utiliza para los Branch (Instrucciones de Salto), Sethi (Instruccion para inicializar valores de más de 13 bits), Nop
 | op | a |cond | op2 |       disp22|
 31  29  28    24    21             0
 
@@ -46,7 +46,7 @@ Op2--> Indica que tipo de operacion o el operando, se realizara  en la comparaci
 rd--> registo destino.
 ```
 ```
-### Fomato 3. Para Aritmetica y logicas.
+### Fomato 3. Instrucciones Aritmeticologicas (ADD,SUB) e instrucciones de memoria (LD,ST).
 
 Con inmediato. 
 | op | rd |op3 | rs1 | i=0 | unused(zero) | rs2 |
