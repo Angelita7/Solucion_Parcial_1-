@@ -341,7 +341,7 @@ int fact(int b){
      i=%L1
      
    Lenguaje Ensambrador.
-   
+   ``` 
    Fact
    Mov 1, %L0
    Mov 0, %I0
@@ -355,7 +355,7 @@ int fact(int b){
    Add %L1, 1, %L1
    BA While 
    Salto
-   
+    ```
    
    
      
