@@ -321,6 +321,66 @@ int main(){
 }
  ```
 12. Implemente una función **Mul** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que realice la multiplicación de dos enteros sin signo usando solo sumas.
+ ```
+ R/:
+                                      Lenguaje Ensamblador                                              MUL
+int mul (int a,int b)                          MOV 0,%L1                      
+{                                              MOV 0,%L2
+                                               FOR   
+int c = 0;                                     CMP %L2,%i1
+                                               BG a SALTO
+for  (int  i = 0;  i < b;  i++)                ADD %L1,%i1,%L1
+{                                              BA     FOR 
+c=c+a;                                         ADD %L2,1%l2
+}                                              SALTO
+return c;                                      JMPL %O7,8,%g0
+}                                              MOV %L1,%O0  
+                                  
+					       MAIN
+int main ()                                    MOV 2,%i0  
+{                                              MOV 5,%i1
+                                               CALL MUL 
+int num=2, num2=5, resultado=0;                MOV 0,%L0
+                                               MOV %L0,%O1
+}
+return resultado;
+}
+
+  a=%i0
+   b=%i1 
+   resultado=%L0  
+   c=%L1
+   i=%L2 
+   
+### Lenguaje Emsamblador
+
+### Lenguaje de Maquina
+
+DIRECCIONES	OP	RD	OP3	RS1	i	Unusued/zero	RS2
+OX0000	        10	10001	000010	00000	1	0000000000000	
+OX0004	        10	10010	000010	00000	1	0000000000000	
+OX0008	        10	10010	010100	00000	1	00000000	11001
+OX000C	        10	00000	111000	01111	1	0000000001000	
+	        OP	a	cond	OP2	disp22		
+OX0010	        00	1	1010	010	0000000000000000000100		
+	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
+OX0014	        10	100101	000000	10001	0	00000000	11001
+	        OP	a	cond	OP2	disp22		
+OX0018	        00	0	1000	010	111111111111111111111100	
+	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
+OX001C	        10	10010	000000	10010	1	0000000000001	
+OX0020	        10	00000	111000	01111	1	0000000001000	
+OX0024	        10	00111	000010	00000	0	00000000	10001
+OX0028	        10	11000	000010	00000	1	0000000000010	
+OX002C	        10	11001	000010	00000	1	0000000000101	
+	        OP	disp30					
+OX0030	        01	000000000000000000000000000010110					
+	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
+OX0034	        10	10000	000010	00000	1	0000000000000	
+OX0038	        10	01001	000010	00000	1	00000000	10000
+ 
+ 
+  ```
 
 13. Implemente la función **Pot** en lenguaje de alto nivel,lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que realice la potencia de dos números enteros sin signo realizando llamados a la función desarrollada en el punto 9.
 
@@ -380,5 +440,9 @@ OX0028	        00	0	1000	010	11111111111111111111O11
 
 
 15. Implemente una función **Div** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que calcule la division de un número entero sin signo.
+   ```
+   R/:
+   
+      ```
 
 
