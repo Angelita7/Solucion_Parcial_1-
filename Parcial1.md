@@ -298,6 +298,12 @@ _____________________ 1
 
 ###Lenguaje de Máquina
 
+Direccion   |  op  |   rd   |  op2  |              disp22           |
+0x0000      |  10  | 10000  |  100  |    1111111111111111101010     |
+            |  op  |   rd   |  op3  |  rs1  |  i  |      simm13     |   
+0x0004      |  10  | 10000  |000010 | 10000 |  1  |  0000101000100  |
+            |  op  |   rd   |  op3  |  rs1  |  i  |  unused |   rs2 |
+0x0008      |  10  | 01000  |000010 | 10000 |  0  |00000000 | 00000 |
 ```
 
 11. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
