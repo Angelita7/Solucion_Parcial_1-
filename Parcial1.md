@@ -430,69 +430,102 @@ OX0038	        10	01001	000010	00000	1	00000000	10000
 
 13. Implemente la función **Pot** en lenguaje de alto nivel,lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que realice la potencia de dos números enteros sin signo realizando llamados a la función desarrollada en el punto 9.
 
+```
+                                      Lenguaje Ensamblador
+### Lenguaje de Alto Nivel                                               
+int mul (int a,int b)                                                
+{                                              
+                                                 
+int c = 0;                                     
+                                              
+for  (int  i = 0;  i < b;  i++)                
+{                                               
+c=c+a;                                         
+}                                              
+return c;                                      
+}                                                
+                                  
+					      
+int main ()                                      
+{                                              
+                                               
+int num=2;				       
+int num2=5;				       
+int resultado=0;			       
+int r=num;				       
+					      
+for  (int  i = 2;  i <= b;  i++)  	       
+                                               
+{                                              
+                                                                                    
+r=(mul (r,num));                               
+}
+return r;
+}
+}
+
 Asiganción de registros
    a=%i0
    b=%i1 
    resultado=%L0  
    r=%L1
    i=%L2
-   c=%L3                                       Lenguaje Ensamblador
-                                               MUL
-int mul (int a,int b)                          MOV 0,%L3                      
-{                                              MOV 0,%L2
-                                               FOR   
-int c = 0;                                     CMP %L2,%i1
-                                               BG a SALTO
-for  (int  i = 0;  i < b;  i++)                ADD %L3,%i1.%L3
-{                                              BA a FOR 
-c=c+a;                                         ADD %L2,1,%l2
-}                                              SALTO
-return c;                                      JMPL %O7,8,%g0
-}                                              MOV %L3,%O0  
-                                  
-					       MAIN
-int main ()                                    MOV 2,%i0  
-{                                              MOV 5,%i1
-                                               MOV 0,%L0
-int num=2;				       MOV %L0,%L1
-int num2=5;				       MOV 2,%L2
-int resultado=0;			       FOR
-int r=num;				       CMP %L2,%io
-					       BG a SALTO1
-for  (int  i = 2;  i <= b;  i++)  	       CALL MUL
-                                               BA    FOR 
-{                                              ADD %L2,1,%L2
-                                               SALTO1                                      
-r=(mul (r,num));                               MOV %L1,%O1
-}
-return r;
-}
-}
+   c=%L3 
+   
+### Lenguaje Ensamblador
+ETIQUETA
+MOV 0,%L3
+MOV 0,%L2
+FOR
+CMP %L2,%i1
+BG a SALTO
+ADD %L3,%i1.%L3
+BA a FOR
+ADD %L2,1,%l2
+SALTO
+JMPL %O7,8,%g0
+MOV %L3,%O0
 
-LENGUAJE MÁQUINA
+MAIN
+MOV 2,%i0
+MOV 5,%i1
+MOV 0,%L0
+MOV %L0,%L1
+MOV 2,%L2
+FOR
+CMP %L2,%io
+BG a EXIT
+CALL ETIQUETA
+BA    FOR
+ADD %L2,1,%L2
+EXIT 
+MOV %L1,%O1
 
-DIRECCIONES	OP	RD	OP3	RS1	i	Unusued/zero	RS2
-OX0000	        10	10011	000010	00000	1	0000000000000	
-OX0004	        10	10010	000010	00000	1	0000000000000	
-OX0008	        10	10010	010100	00000	1	00000000	11001
-	        OP	a	cond	OP2	disp22		
-OX000C	        00	1	1010	010	0000000000000000000100		
-	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
-OX0010	        10	10011	000000	10011	0	00000000	11000
-	        OP	a	cond	OP2	disp22		
-OX0014	        00	0	1000	010      1111111111111111111100	
-	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
-OX0018	        10	10010	000000	10010	1	0000000000001	
-OX001C	        10	00000	111000	01111	1	0000000001000	
-OX0020	        10	01000	000010	00000	0	00000000	10011
-OX0024	        10	11000	000010	00000	1	0000000000010	
-OX0028	        10	11001	000010	00000	1	0000000000101	
-OX002C	        10	10000	000010	00000	1	00000000000000	
-OX0030	        10	10001	000010	00000	0	00000000	10000
-OX0034	        10	10010	000010	00000	1	0000000000010	
-OX0038	        10	10100	010100	OOOOOO	0	00000000	11000
-                OP	a	cond	OP2	 disp22		
-OX003C	        00	1	1010	010      0000000000000000000100	        
+   
+### Lenguaje de Máquina
+
+DIRECCIONES	|OP|    |RD|	|OP3|	|RS1|	|i|	|Unusued|	|RS2|
+OX0000	        |10|   |10011| |000010|	|00000|	|1|	|00000000|      |00000|	
+OX0004	        |10|   |10010| |000010|	|00000|	|1|	|00000000|      |00000|	
+OX0008	        |10|   |10010| |010100|	|00000|	|1|	|00000000|	|11001|
+	        |OP|    |a|	|cond|	|OP2|	|        disp22	       |
+OX000C	        |00|	|1|	|1010|	|010|	|0000000000000000000100|		
+	        |OP|	|RD|	|OP3|	|RS1|	|i|	|Unusued|	|RS2|
+OX0010	        |10||	|10011|	|000000|	|10011|	|0|	|00000000|	11000
+	        |OP|	|a|	|cond|	|OP2|	|         disp22	 | 	
+OX0014	        |00|	|0|	|1000	010      1111111111111111111100	
+	        |OP|	|RD|	|OP3	RS1	 |i|	|Unusued|	|RS2|
+OX0018	        |10|	|10010|	|000000	10010	 |1|	|0000000000001	
+OX001C	        |10|	|00000|	|111000	01111	 |1|	|0000000001000	
+OX0020	        |10||	|01000|	|000010||00000	 |0|	|00000000	10011
+OX0024	        |10|	|11000|	|000010||00000	 |1|	|0000000000010	
+OX0028	        |10|	|11001|	|000010||00000	 |1|	|0000000000101	
+OX002C	        |10|	|10000|	|000010||00000	 |1|	|00000000000000	
+OX0030	        |10|	|10001|	|000010||00000	 |0|	|00000000|	10000
+OX0034	        |10|	|10010|	|000010||00000	 |1|	|00000000|      00010	
+OX0038	        |10|	|10100|	|010100||OOOOOO	 |0|	|00000000|	11000
+                |OP|	  |a|	|cond|	OP2	 disp22		
+OX003C	        |00|	  |1|	|1010|	010      0000000000000000000100	        
 	
 	
                 OP	a	cond	OP2	disp22		
@@ -500,7 +533,7 @@ OX00034	        00	O	1000	010	111111111111111111111OO
 	        OP	RD	OP3	RS1	i	Unusued/zero	RS2
 OX0038	        10	10010	000010	10010	1	0000000000001	
 OX004C	        10	01001	000010	00000	0	00000000	10001
-
+```
 14. Implemente una función **Fact** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que calcule el factorial de un número entero sin signo.
 
 int fact(int b){
