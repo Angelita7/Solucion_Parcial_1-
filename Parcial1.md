@@ -319,6 +319,52 @@ int main(){
 	int x = test(p,y,c);
 	return x + 45;
 }
+
+R/: 
+
+X=%i0
+   y=%i1
+   z=%i2 
+   c=%L0  
+   a=%L1                                     Lenguaje ensamblador
+					     EJEMPLO			     
+int ejemplo(int x, int y, int z){            SUB %i0,%i1,%i3
+        int a;                               SLL %i2,8,%i2
+        a = x - y + z*8;                     ADD %i3,%i2,%l1
+        return a + 2;                        JMPL %O7,8,%g0
+}                                            ADD %L1,2,%O0
+
+int main(){                                  MAIN
+        int x = 4, y = 2, z = -128;          MOV 4,%i0
+	                                     MOV 2,%i1
+					     MOV -128,%i2
+					     CALL EJEMPLO
+        int c= 0;                            MOV 0,%L0                          
+        int c = ejemplo(x,y,z);              ADD %L0,45,%O1
+        return c + 45;
+}
+
+###Lenguaje Ensamblado
+
+###Lenguaje Maquina
+
+DIRECCIONES    |OP|	|RD|	|OP3|	|RS1|	 |i|	  |Unusued |	|RS2|
+OX0000	       |10|	|11010|	|000010||11000|	  0	  00000000      |11001|
+	       |OP|	|RD|	|OP3|	|RS1|	 |i|	  Unusued 	|SHCNT|
+OX0004	       |10|	|11001|	|100101||11001|	 |1|	  00000000	|01000|
+	       |OP|	|RD|	|OP3|	|RS1|    |i|	  Unusued 	|RS2|
+OX0008	       |10|	|10001|	|000000||11011|	 |0|	  00000000|	|11010|
+OX000C	       |10|	|00000|	|111000||01111|	 |1|	  0000000001000|	
+OX0010	       |10|	|10000|	|000000||10001|	 |1|	  0000000000010|	
+OX0014	       |10|	|11000|	|000010||00000|	 |1|	  0000000000100|	
+OX0018	       |10|	|11001|	|000010||00000|	 |1|	  0000000000010|		
+OX001C	       |10|	|11010|	|000010||00000|	 |1|     |1111110000000|
+	       |OP|	|       Disp 30		 |			
+OX0020         |01|	|00000000000000000000000000001000|			
+	       |OP|	|RD|	|OP3|	|RS1|	|i|	|    Unusued |	|RS2|
+OX0024         |10|	|10000	|000010||00000|	|1|	|0000000000000|	
+OX0028         |10|	|11001	|000000||10000|	|1|	|0000000101101|
+
  ```
 12. Implemente una función **Mul** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que realice la multiplicación de dos enteros sin signo usando solo sumas.
  ```
